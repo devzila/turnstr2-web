@@ -1,0 +1,15 @@
+current directory: /home/nilay/turnstr2-web/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/home/nilay/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20171215-3069-i481vq.rb extconf.rb
+creating Makefile
+
+current directory: /home/nilay/turnstr2-web/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/nilay/turnstr2-web/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/nilay/turnstr2-web/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20171215-3069-48enf3/bindex

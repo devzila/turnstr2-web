@@ -4,7 +4,7 @@ class Admin::SessionsController < Admin::BaseController
 
 
   def new
-
+   return redirect_to('/admin/home') if current_admin.present?
   end
 
   def create
@@ -21,7 +21,7 @@ class Admin::SessionsController < Admin::BaseController
 
   def destroy
     session[:admin_id] = nil
-    redirect_to '/login'
+    redirect_to new_admin_session_path
   end
 
 end
