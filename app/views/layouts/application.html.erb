@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Turnstr</title>
+  <title>Turnstr Member</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +10,7 @@
 
 <body>
 <%= render 'member/layouts/header' %>
-<div class="container">
+<div>
   <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
