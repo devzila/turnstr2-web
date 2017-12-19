@@ -13,17 +13,15 @@
     </ul>
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/customer">Login</a>
-      </li>
-      <li class="navbar-item">
-        <a class="nav-link" href="/agent">Agent</a>
-      </li>
-
-      <li class="navbar-item">
-        <a class="nav-link" href="/admin">Admin</a>
-      </li>
-    </ul>
+      <% if current_member %>
+          <li>
+            <%= link_to('Logout', member_sessions_path, method: :delete) %>
+          </li>
+      <% else %>
+          <li>
+            <%= link_to('Login', new_member_sessions_path)  %>
+          </li>
+      <% end %>    </ul>
 
   </div>
 </nav>
