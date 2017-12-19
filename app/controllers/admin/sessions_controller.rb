@@ -8,20 +8,20 @@ class Admin::SessionsController < Admin::BaseController
   end
 
   def create
-    user = User.find_by_email(params[:email])
+    user = Admin.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:admin_id] = user.id
       redirect_to '/admin/home'
     else
       flash[:error] = 'Invalid login password'
-      redirect_to new_admin_session_path
+      redirect_to new_admin_sessions_path
     end
 
   end
 
   def destroy
     session[:admin_id] = nil
-    redirect_to '/login'
+    redirect_to new_admin_sessions_path
   end
 
 end
