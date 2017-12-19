@@ -25,4 +25,14 @@ class Member::SessionsController < Member::BaseController
     redirect_to new_member_session_path
   end
 
+
+def showpic
+    send_file "/home/nilay/turnstr2-web/app/assets/images/#{params[:image]}.jpg", :disposition => 'inline', 
+              :type => 'image/jpg', :x_sendfile => true # .jpg will pass as format
+end
+
+def show
+end
+
+
 end

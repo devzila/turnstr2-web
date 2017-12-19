@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     root to: 'home#index'
     resources :sessions, only: [:new, :create, :destroy]
     resources :home
+    match '/images/:image', to: "sessions#showpic", via: "get", as: :renderpic
+
   end
 
 
