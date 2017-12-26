@@ -12,3 +12,10 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( turnstr.webflow.css )
 Rails.application.config.assets.precompile += %w( webflow.css )
 Rails.application.config.assets.precompile += %w( normalize.css )
+Rails.application.config.assets.precompile += %w( admin/sb-admin.css )
+Rails.application.config.assets.precompile += %w( admin/bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( admin/login.css )
+Rails.application.config.assets.precompile += %w( font-awesome/css/font-awesome.min.css )
+
+Rails.application.config.assets.precompile += %w( admin/bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( admin/jquery.js )

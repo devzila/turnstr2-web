@@ -1,16 +1,56 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">Turnstr Admin</a>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+<!-- Navigation -->
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button class="navbar-toggler hidden-sm-up pull-sm-right" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      &#9776;
+    </button>
+    <a class="navbar-brand" href="index.html">Turnstr Admin</a>
+  </div>
+  <!-- Top Menu Items -->
+  <ul class="nav navbar-nav top-nav navbar-right pull-xs-right">
+      <li class="dropdown nav-item">
+      <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <%= current_admin.name %>  <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+         <li class="divider"></li>
+        <li class="dropdown-item">
+          <%= link_to('Log Out', admin_sessions_path, method: :delete) %>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+  <div class="collapse navbar-collapse navbar-toggleable-sm navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav list-group">
+      <li class="list-group-item">
+        <a href="index.html"><i class="fa fa-fw fa-users"></i> Members</a>
       </li>
-
+      <li class="list-group-item">
+        <a href="charts.html"><i class="fa fa-fw fa-photo"></i> Stories</a>
+      </li>
     </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 
     <ul class="navbar-nav ml-auto">
       <% if current_admin %>
@@ -21,7 +61,6 @@
           <li>
             <%= link_to('Login', new_admin_sessions_path)  %>
           </li>
-      <% end %>    </ul>
-
-  </div>
-</nav>
+      <% end %>
+    </ul>
+-->

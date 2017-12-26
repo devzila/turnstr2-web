@@ -1,17 +1,12 @@
-<div class="container">
 
-  <form class="form-signin" action="/admin/sessions" method="post">
-    <h2 class="form-signin-heading">Please sign in</h2>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  </form>
+<div class="modal-dialog">
+  <div class="loginmodal-container">
+    <h1>Login to Your Account</h1><br>
+    <form action="/admin/sessions" method="post">
+      <input type="email" name="email" placeholder="Email address">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+    </form>
 
-</div> <!-- /container -->
+  </div>
+</div>

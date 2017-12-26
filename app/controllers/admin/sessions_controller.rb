@@ -1,6 +1,7 @@
 class Admin::SessionsController < Admin::BaseController
-
+  layout 'plain'
   skip_before_filter :authorize
+
 
 
   def new
