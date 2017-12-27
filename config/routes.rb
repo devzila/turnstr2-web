@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     root to: 'home#index'
     resource :sessions, only: [:new, :create, :destroy]
     resources :home
+    resources :members
   end
 end
