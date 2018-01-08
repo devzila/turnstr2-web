@@ -13,5 +13,7 @@ Rails.application.routes.draw do
     resource :sessions, only: [:new, :create, :destroy]
     resources :home
     resources :members
+    put 'members/:id', to: 'members#update'
+
   end
 end

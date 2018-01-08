@@ -14,6 +14,8 @@ Rails.application.config.assets.precompile += %w( webflow.css )
 Rails.application.config.assets.precompile += %w( normalize.css )
 Rails.application.config.assets.precompile += %w( admin/sb-admin.css )
 Rails.application.config.assets.precompile += %w( admin/bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( admin/bootstrap.css )
+
 Rails.application.config.assets.precompile += %w( admin/login.css )
 Rails.application.config.assets.precompile += %w( font-awesome/css/font-awesome.min.css )
 

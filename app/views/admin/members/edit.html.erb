@@ -1,0 +1,86 @@
+
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <h2>Edit Member</h2>
+    <form role="form"  action="/admin/members" method="put">
+      <fieldset class="form-group">
+        <label>First Name</label>
+        <input class="form-control" placeholder="First Name">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" placeholder="Last Name">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Website</label>
+        <input class="form-control" placeholder="Website">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Bio</label>
+        <input class="form-control" placeholder="Bio">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Gender</label>
+        <div class="radio">
+          <label>
+          <input type="radio" name="gender" id="male" value="Male" checked> Male
+          </label>
+          <label>
+          <input type="radio" name="gender" id="female" value="Female"> Female
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Address</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>State</label>
+        <input class="form-control" placeholder="State">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>City</label>
+        <input class="form-control" placeholder="City">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Phone</label>
+        <input class="form-control" placeholder="Phone">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Info</label>
+        <input class="form-control" placeholder="Info">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>IsVerified</label>
+        <label class="radio-inline">
+          <input type="radio" name="isverified" id="yes" value="yes">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="isverified" id="no" value="no" checked>No
+        </label>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>IsActive</label>
+        <label class="radio-inline">
+          <input type="radio" name="isactive" id="yes" value="yes">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="isactive" id="no" value="no" checked>No
+        </label>
+      </fieldset>
+      <button type="submit" class="btn btn-secondary">Save Changes</button>
+      <button type="reset" class="btn btn-secondary">Reset</button>
+    </form>
+  </div>
+ </div>
