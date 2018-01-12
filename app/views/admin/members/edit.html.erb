@@ -1,86 +1,71 @@
-
 <div class="row">
   <div class="col-xl-12 col-lg-12">
     <h2>Edit Member</h2>
-    <form role="form"  action="/admin/members" method="put">
+      <%= form_for(@member,url: 'update', html: { method: :put })do |f| %>
       <fieldset class="form-group">
-        <label>First Name</label>
-        <input class="form-control" placeholder="First Name">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %> 
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Last Name</label>
-        <input class="form-control" placeholder="Last Name">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Website</label>
-        <input class="form-control" placeholder="Website">
+        <%= f.label :website %>
+        <%= f.text_field :website, class: 'form-control',  placeholder: "Website" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Bio</label>
-        <input class="form-control" placeholder="Bio">
+        <%= f.label :bio %>
+        <%= f.text_field :bio, class: 'form-control', placeholder: "Bio" %>
+      </fieldset>
+      <fieldset class="form-group">
+        <%= f.label :gender %>
+          <%= f.radio_button :gender,  'Male', checked: "checked" %> Male
+          <%= f.radio_button :gender, 'Female' %> Female
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Gender</label>
-        <div class="radio">
-          <label>
-          <input type="radio" name="gender" id="male" value="Male" checked> Male
-          </label>
-          <label>
-          <input type="radio" name="gender" id="female" value="Female"> Female
-          </label>
-        </div>
+        <%= f.label :address %>
+        <%= f.text_area :address, class: 'form-control', rows:"3" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Address</label>
-        <textarea class="form-control" rows="3"></textarea>
+        <%= f.label :state %>
+        <%= f.text_field :state, class: 'form-control', placeholder: "State" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>State</label>
-        <input class="form-control" placeholder="State">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: 'form-control', placeholder: "City" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>City</label>
-        <input class="form-control" placeholder="City">
+        <%= f.label :phone %>
+        <%= f.text_field :phone, class: 'form-control', placeholder: "Phone" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Phone</label>
-        <input class="form-control" placeholder="Phone">
+        <%= f.label :info %>
+        <%= f.text_field :info, class: 'form-control',placeholder:"Info" %>
       </fieldset>
 
       <fieldset class="form-group">
-        <label>Info</label>
-        <input class="form-control" placeholder="Info">
+        <%= f.label :is_verified %>
+          <%= f.radio_button :is_verified, '1' %> Yes
+          <%= f.radio_button :is_verified, '0', checked: "checked" %> No
       </fieldset>
 
       <fieldset class="form-group">
-        <label>IsVerified</label>
-        <label class="radio-inline">
-          <input type="radio" name="isverified" id="yes" value="yes">Yes
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="isverified" id="no" value="no" checked>No
-        </label>
+        <%= f.label :is_active %>
+          <%= f.radio_button :is_active, '1', checked: "checked" %> Yes
+          <%= f.radio_button :is_active, '0' %> No
       </fieldset>
 
-      <fieldset class="form-group">
-        <label>IsActive</label>
-        <label class="radio-inline">
-          <input type="radio" name="isactive" id="yes" value="yes">Yes
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="isactive" id="no" value="no" checked>No
-        </label>
-      </fieldset>
-      <button type="submit" class="btn btn-secondary">Save Changes</button>
+      <%= f.submit "Save changes", class: "btn btn-secondary" %>
       <button type="reset" class="btn btn-secondary">Reset</button>
-    </form>
+    <% end %>
   </div>
  </div>

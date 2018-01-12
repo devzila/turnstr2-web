@@ -15,9 +15,9 @@ port        ENV.fetch("PORT") { 3001 }
 #
 environment ENV.fetch("RAILS_ENV") { "production" }
 
-bind  "unix:///tmp/turnstr-web/turnstr-web.sock"
-pidfile "/tmp/turnstr-web/pid"
-state_path "/tmp/turnstr-web/state"
+#bind  "unix:///tmp/turnstr-web/turnstr-web.sock"
+#pidfile "/tmp/turnstr-web/pid"
+#state_path "/tmp/turnstr-web/state"
 
 
 # Specifies the number of `workers` to boot in clustered mode.
