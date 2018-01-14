@@ -34,6 +34,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 
+gem 'paperclip', '~> 5.0.0'
+gem 'aws-sdk', '~> 2.3'
+
+gem 'kaminari'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

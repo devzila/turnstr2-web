@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xl-12 col-lg-12">
+    <h2>Stories</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <th>Caption</th>
+          <th>Total Comments</th>
+          <th>Total Likes</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @stories.each do |story| %>
+        <tr>
+          <td><%= story.caption %></td>
+          <td><%= story.comments_count %></td>
+          <td><%= story.likes_count %></td>
+          <% story.media.each do |dgg| %>
+          <td><img src="<%= dgg.first %>"></td>
+          <% end %>
+
+    </div>        
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>

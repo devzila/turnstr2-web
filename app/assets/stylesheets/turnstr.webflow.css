@@ -68,7 +68,7 @@ body {
   text-align: center;
 }
 
-.postblock {
+.storyblock {
   display: block;
   width: 440px;
   margin-right: auto;
@@ -79,7 +79,7 @@ body {
   text-align: left;
 }
 
-.postimage {
+.storyimage {
   display: block;
   width: 420px;
   height: 420px;
@@ -178,7 +178,7 @@ body {
   font-weight: 400;
 }
 
-.postedtime {
+.storyedtime {
   max-width:25%;
   margin-top: 10px;
   float: right;
@@ -436,7 +436,7 @@ body {
   text-align: center;
 }
 
-.stat-posts-number {
+.stat-stories-number {
   display: inline-block;
   margin-bottom: 5px;
   color: #333;
@@ -613,11 +613,11 @@ body {
   font-size: 16px;
 }
 
-.post-content {
+.story-content {
   position: relative;
 }
 
-.post-modal {
+.story-modal {
   position: fixed;
   z-index: 1500;
   display: none;
@@ -703,19 +703,19 @@ body {
   background-color: #f2f2f2;
 }
 
-.post-stats {
+.story-stats {
   padding: 8px 10px;
   border-bottom: 1px solid #e3e3e3;
 }
 
-.post-stats-label {
+.story-stats-label {
   display: inline-block;
   font-family: Lato, sans-serif;
   color: #999;
   font-weight: 400;
 }
 
-.post-stats-data {
+.story-stats-data {
   display: inline-block;
   margin-right: 10px;
   margin-left: 5px;
@@ -1061,12 +1061,12 @@ body {
   .content {
     padding-top: 0px;
   }
-  .postblock {
+  .storyblock {
     width: 100%;
     padding-right: 5px;
     padding-left: 5px;
   }
-  .postimage {
+  .storyimage {
     width: 100%;
     height: auto;
     margin-bottom: 0px;
@@ -1211,7 +1211,7 @@ body {
 	font-family: Lato, sans-serif;
 }
 
-.postimage.homepostimg {
+.storyimage.homestoryimg {
 	height:100%;
 }
 .view-share {
@@ -1225,7 +1225,7 @@ body {
 a.link-anchor{
 	border-style: none;
 }
-.post-thumb{
+.story-thumb{
 	float:right;
 }
 
