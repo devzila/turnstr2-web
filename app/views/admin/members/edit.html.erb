@@ -23,8 +23,8 @@
       </fieldset>
       <fieldset class="form-group">
         <%= f.label :gender %>
-          <%= f.radio_button :gender,  'Male', checked: "checked" %> Male
-          <%= f.radio_button :gender, 'Female' %> Female
+          <%= f.radio_button :gender,  'Male', checked: @member.gender == 'Male' %> Male
+          <%= f.radio_button :gender, 'Female', checked: @member.gender == 'Female' %> Female
       </fieldset>
 
       <fieldset class="form-group">
