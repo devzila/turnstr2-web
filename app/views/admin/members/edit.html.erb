@@ -54,14 +54,14 @@
 
       <fieldset class="form-group">
         <%= f.label :is_verified %>
-          <%= f.radio_button :is_verified, '1' %> Yes
-          <%= f.radio_button :is_verified, '0', checked: "checked" %> No
+          <%= f.radio_button :is_verified, '1', checked: @member.is_verified? %> Yes
+          <%= f.radio_button :is_verified, '0', checked: !@member.is_verified? %> No
       </fieldset>
 
       <fieldset class="form-group">
         <%= f.label :is_active %>
-          <%= f.radio_button :is_active, '1', checked: "checked" %> Yes
-          <%= f.radio_button :is_active, '0' %> No
+          <%= f.radio_button :is_active, '1', checked: @member.is_active? %> Yes
+          <%= f.radio_button :is_active, '0', checked: !@member.is_active? %> No
       </fieldset>
 
       <%= f.submit "Save changes", class: "btn btn-secondary" %>

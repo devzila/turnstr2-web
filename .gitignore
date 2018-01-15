@@ -18,3 +18,4 @@
 .byebug_history
 .idea
 .idea/*
+.idea/workspace.xml
