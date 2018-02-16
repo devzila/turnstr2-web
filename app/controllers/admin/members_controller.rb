@@ -1,5 +1,6 @@
 class Admin::MembersController < Admin::BaseController
-before_action :set_member, only: [:show, :update, :destroy]
+  before_action :set_member, only: [:show, :update, :destroy]
+  before_action :set_page_title
   #  @posts = Post.page(params[:page]).per(10)
 
   def index
@@ -27,6 +28,10 @@ before_action :set_member, only: [:show, :update, :destroy]
 
   def member_params
 	 params.require(:user).permit(:first_name, :last_name, :gender,  :bio, :address, :city, :state,:website, :info, :phone, :is_verified, :is_active)
+  end
+
+  def set_page_title
+    @page_title = "Members"
   end
 
 end
