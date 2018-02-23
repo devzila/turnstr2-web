@@ -13,9 +13,21 @@ class Admin::MembersController < Admin::BaseController
   end
 
   def update
-    @member = User.find(params[:id])
     @member.update_attributes(member_params)
     flash[:notice] = 'Profile is successfully updated.'
+    redirect_to('/admin/members')
+  end
+
+  def destroy
+    begin
+      if @member.destroy
+        flash[:notice] = 'Profile is successfully updated.'
+      else
+        flash[:notice] = 'First delete related stories and videos before deleting user.'
+      end
+    rescue
+      flash[:notice] = 'First delete related stories and videos before deleting user.'
+    end
     redirect_to('/admin/members')
   end
   

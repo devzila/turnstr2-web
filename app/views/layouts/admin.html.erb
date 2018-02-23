@@ -43,6 +43,9 @@
   <div class="main-panel">
     <%= render 'admin/layouts/nav' %>
     <div class="content">
+      <% if flash[:notice] %>
+        <div class="alert alert-danger" role="alert"> <strong> <%= flash[:notice]%> </strong></div>
+      <% end %>
     <%= yield %>
     </div>
 
@@ -54,7 +57,8 @@
 
 
 <!--   Core JS Files   -->
-<script src="/admin/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+<%= javascript_include_tag "application" %>
+
 <script src="/admin/assets/js/bootstrap.min.js" type="text/javascript"></script>
 
 <!--  Charts Plugin -->

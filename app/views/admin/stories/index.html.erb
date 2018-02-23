@@ -5,6 +5,7 @@
         <thead>
         <tr>
           <th>Caption</th>
+          <th>User</th>
           <th>Total Comments</th>
           <th>Total Likes</th>
           <th></th>
@@ -14,10 +15,11 @@
         <% @stories.each do |story| %>
         <tr>
           <td><%= story.caption %></td>
+          <td><%= story.user.name %></td>
           <td><%= story.comments_count %></td>
           <td><%= story.likes_count %></td>
 
-          <td></td>
+          <td><%= link_to('View', admin_story_path(story)) %> | <%= link_to('Delete', admin_story_path(story), method: :delete) %></td>
 
 
          </tr>

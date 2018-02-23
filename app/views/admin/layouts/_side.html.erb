@@ -15,43 +15,43 @@
     </div>
 
     <ul class="nav">
-      <li class="active">
+      <li <%= 'class=active' if params[:controller] == 'admin/home'%> >
         <a href="/admin/home">
           <i class="pe-7s-graph"></i>
           <p>Dashboard</p>
         </a>
       </li>
-      <li>
+      <li <%= 'class=active' if params[:controller] == 'admin/members'%> >
         <a href="/admin/members">
           <i class="pe-7s-user"></i>
           <p>User</p>
         </a>
       </li>
-      <li>
+      <li <%= 'class=active' if params[:controller] == 'admin/stories'%> >
         <a href="/admin/stories">
           <i class="pe-7s-photo-gallery"></i>
           <p>Turn Stories</p>
         </a>
       </li>
-      <li>
+      <li <%= 'class=active' if params[:controller] == 'admin/videos'%> >
         <a href="/admin/video-stories">
           <i class="pe-7s-film"></i>
           <p>Video Stories</p>
         </a>
       </li>
-      <li>
+      <li <%= 'class=active' if params[:controller] == 'admin/photo'%> >
         <a href="/admin/photos">
           <i class="pe-7s-photo"></i>
           <p>Photos</p>
         </a>
       </li>
-      <li>
+      <li<%= 'class=active' if params[:controller] == 'admin/reports'%> >
         <a href="/admin/reports">
           <i class="pe-7s-news-paper"></i>
           <p>Reports</p>
         </a>
       </li>
-      <li>
+      <li<%= 'class=active' if params[:controller] == 'admin/settings'%> >
         <a href="/admin/settings">
           <i class="pe-7s-settings"></i>
           <p>Settings</p>

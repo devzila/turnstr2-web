@@ -3,7 +3,21 @@ class Admin::StoriesController < Admin::BaseController
   before_action :set_page_title
 
   def index
-    @stories = Story.all
+    @stories = Story.page(params[:page]).per(10)
+  end
+
+
+  def destroy
+    begin
+      if @story.destroy
+        flash[:notice] = 'Story is successfully deleted.'
+      else
+        flash[:notice] = 'Error in deleting story.'
+      end
+    rescue
+      flash[:notice] = 'Error in deleting story.'
+    end
+    redirect_to admin_stories_path
   end
 
   
