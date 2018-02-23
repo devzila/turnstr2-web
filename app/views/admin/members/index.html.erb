@@ -18,7 +18,11 @@
           <td><%= member.email %></td>
           <td><%= member.state %></td>
           <td><%= member.is_verified ? 'Yes' : 'No' %></td>
-          <td><%= link_to('Edit', edit_admin_member_path(member.id))%> | <%= link_to('Delete', admin_member_path(member.id), method: :delete)%> </td>
+          <td>
+            <%= link_to('Edit', edit_admin_member_path(member.id))%>
+            <%= link_to('Delete', admin_member_path(member.id), method: :delete, data: {:confirm => "You sure?" })%>
+            <%= button_to('Delete', admin_member_path(member.id), method: :delete, data: {:confirm => "You sure?" })%>
+          </td>
         </tr>
         <% end %>
         </tbody>
