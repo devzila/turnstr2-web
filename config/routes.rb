@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :stories
     resources :videos
     resources :photos
+    resources :comments
   end
 end
