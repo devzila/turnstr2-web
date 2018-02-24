@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     put 'members/:id/update', to:'members#update'
     resources :stories
     resources :videos
+    resources :photos
   end
 end

@@ -4,6 +4,7 @@
       <table class="table table-bordered table-hover">
         <thead>
         <tr>
+          <th>Thumb</th>
           <th>User</th>
           <th>Created On</th>
           <th>Total Comments</th>
@@ -12,15 +13,16 @@
         </tr>
         </thead>
         <tbody>
-        <% @videos.each do |video| %>
+        <% @photos.each do |photo| %>
         <tr>
-          <td><%= video.owner&.name %></td>
-          <td><%= video.created_at %></td>
-          <td><%= video.comments_count %></td>
-          <td><%= video.likes_count %></td>
+          <td><img src="<%= photo.image.url(:thumb) %>"/></td>
+          <td><%= photo.user&.name %></td>
+          <td><%= photo.created_at %></td>
+          <td><%= photo.comments_count %></td>
+          <td><%= photo.likes_count %></td>
 
           <td>
-            <%= link_to('Delete', admin_video_path(video), method: :delete, data: {:confirm => "You sure?" }) %>
+            <%= link_to('Delete', admin_photo_path(photo), method: :delete, data: {:confirm => "You sure?" }) %>
           </td>
 
 
