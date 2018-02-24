@@ -20,7 +20,7 @@
           <td><%= member.is_verified ? 'Yes' : 'No' %></td>
           <td>
             <%= link_to('Edit', edit_admin_member_path(member.id))%>
-            <%= link_to('Delete', admin_member_path(member.id), method: :delete, data: {:confirm => "You sure?" })%>
+            | <%= link_to('Delete', admin_member_path(member.id), method: :delete, data: {:confirm => "You sure?" })%>
           </td>
         </tr>
         <% end %>

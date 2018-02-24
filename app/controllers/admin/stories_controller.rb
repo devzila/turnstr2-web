@@ -6,6 +6,10 @@ class Admin::StoriesController < Admin::BaseController
     @stories = Story.page(params[:page]).per(10)
   end
 
+  def show
+
+  end
+
 
   def destroy
     begin
