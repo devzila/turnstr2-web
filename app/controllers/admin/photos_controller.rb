@@ -26,7 +26,7 @@ class Admin::PhotosController < Admin::BaseController
 
   
 
-  def set_video
+  def set_photo
     @photo = Photo.find(params[:id])
   end
 
