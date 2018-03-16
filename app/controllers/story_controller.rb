@@ -15,6 +15,8 @@ class StoryController < ApplicationController
     @face5_url = @story.face5_media.file? ? object.face5_media.url(:thumb) : @face3_url
     @face6_url = @story.face6_media.file? ? object.face6_media.url(:thumb) : @face4_url
 
+    @user_name = @story.user.username || @story.user.name
+
   end
 
 end

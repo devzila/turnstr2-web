@@ -1,5 +1,5 @@
 class IndexController < ApplicationController
-  layout 'plain'
+  layout false
   def index
 
     @story = Story.find_by(id: params[:id])
