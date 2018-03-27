@@ -4,16 +4,19 @@ class StoryController < ApplicationController
 
     @story = Story.find_by(id: params[:id])
 
+
+
     if @story.blank?
       @story = Story.last
     end
 
-    @face1_url = @story.face1_media.url(:thumb)
-    @face2_url = @story.face2_media.file? ? @story.face2_media.url(:thumb) : @face1_url
-    @face3_url = @story.face3_media.file? ? @story.face3_media.url(:thumb) : @face1_url
-    @face4_url = @story.face4_media.file? ? @story.face4_media.url(:thumb) : @face2_url
-    @face5_url = @story.face5_media.file? ? @story.face5_media.url(:thumb) : @face3_url
-    @face6_url = @story.face6_media.file? ? @story.face6_media.url(:thumb) : @face4_url
+
+    @face1_url = @story.get_face_thumb_image(1)
+    @face2_url = @story.get_face_thumb_image(2) || @face1_url
+    @face3_url = @story.get_face_thumb_image(3) || @face1_url
+    @face4_url = @story.get_face_thumb_image(4) || @face2_url
+    @face5_url = @story.get_face_thumb_image(5) || @face3_url
+    @face6_url = @story.get_face_thumb_image(6) || @face4_url
 
     @user_name = @story.user.username || @story.user.name
 

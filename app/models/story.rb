@@ -22,4 +22,16 @@ class Story < ApplicationRecord
     eager_load(:user)
   }
 
+
+  def get_face_thumb_image(face)
+    if self.send("face#{face}_video_thumb").file?
+      self.send("face#{face}_video_thumb").url(:thumb) 
+    elsif self.send("face#{face}_media").file?
+      self.send("face#{face}_media").url(:thumb) 
+    else
+      nil
+    end    
+
+  end  
+
 end
