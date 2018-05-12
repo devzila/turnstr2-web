@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     resources :videos
     resources :photos
     resources :comments
+    resource :settings
+    resource :downloads
   end
 end

@@ -31,7 +31,7 @@ class Admin::StoriesController < Admin::BaseController
   end
 
 def set_page_title
-  @page_title = "Turn Stroies"
+  @page_title = "Turn Stories"
 end
 
 
