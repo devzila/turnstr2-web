@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_secure_password validations: false
 
   has_many :albums, dependent: :destroy
-  has_many :photos, through: :albums, dependent: :destroy
+  has_many :albums, dependent: :destroy
   has_many :stories, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
