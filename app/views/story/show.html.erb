@@ -164,7 +164,7 @@
 <div class="space3d">
   <div class="_3dbox">
     <div class="_3dface _3dface--front">
-      <% if face1_url.include? ".mp4" %>
+      <% if @face1_url.include? ".mp4" %>
         <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
           <source src="<%=@face1_url%>" type="video/mp4"></source>
         </video>
@@ -178,28 +178,28 @@
       <%end%>
     </div>
     <div class="_3dface _3dface--bottom">
-      <% if face3_url.include? ".mp4" %>
+      <% if @face3_url.include? ".mp4" %>
           <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
             <source src="<%=@face3_url%>" type="video/mp4"></source>
           </video>
       <%end%>
     </div>
     <div class="_3dface _3dface--left">
-      <% if face4_url.include? ".mp4" %>
+      <% if @face4_url.include? ".mp4" %>
           <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
             <source src="<%=@face4_url%>" type="video/mp4"></source>
           </video>
       <%end%>
     </div>
     <div class="_3dface _3dface--right">
-      <% if face5_url.include? ".mp4" %>
+      <% if @face5_url.include? ".mp4" %>
           <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
             <source src="<%=@face5_url%>" type="video/mp4"></source>
           </video>
       <%end%>
     </div>
     <div class="_3dface _3dface--back">
-      <% if face6_url.include? ".mp4" %>
+      <% if @face6_url.include? ".mp4" %>
           <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
             <source src="<%=@face6_url%>" type="video/mp4"></source>
           </video>
