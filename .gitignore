@@ -21,3 +21,4 @@
 .idea/workspace.xml
 
 .DS_Store
+config/secrets.yml
