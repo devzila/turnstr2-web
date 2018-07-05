@@ -118,27 +118,32 @@
     }
 
     ._3dface--front {
-
+      background: url(<%=@face1_url%>);
       background-size: 100%;
     }
 
     ._3dface--left {
+      background: url(<%=@face2_url%>);
       background-size: auto 100%;
     }
 
     ._3dface--right {
+      background: url(<%=@face3_url%>);
       background-size: auto 100%;
     }
 
     ._3dface--top {
+      background: url(<%=@face4_url%>);
       background-size: auto 100%;
     }
 
     ._3dface--bottom {
+      background: url(<%=@face5_url%>);
       background-size: auto 100%;
     }
 
     ._3dface--back {
+      background: url(<%=@face6_url%>);
       background-size: auto 100%;
     }
 
@@ -159,6 +164,10 @@
 <div class="space3d">
   <div class="_3dbox">
     <div class="_3dface _3dface--front">
+      <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
+        <source src="https://s3.us-east-2.amazonaws.com/turnstr-production/stories/face1_media/000/000/165/original/face1_video.mp4?1530777611" type="video/mp4"></source>
+      </video>
+
       <% if @face1_ori_url.include? ".mp4" %>
         <video width="400" preload="preload"  id="video" autoplay="autoplay" loop="loop">
           <source src="<%=@face1_ori_url%>" type="video/mp4"></source>
