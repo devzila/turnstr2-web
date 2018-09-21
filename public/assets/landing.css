@@ -149,18 +149,10 @@ strong {
 }
 
 
-.main-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  --width: 50%;
-  width: var(--width);
-  height: calc(var(--width) * 0.2);
-}
-
 ul {
   margin: 0 0 0.5em 0;
 }
+
 
 @media screen and (max-width: 650px) {
   .highlight {

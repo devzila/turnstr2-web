@@ -24,4 +24,6 @@ Rails.application.routes.draw do
     resource :settings
     resource :downloads
   end
+
+  get "/:page" => "static#show"
 end
